@@ -1,4 +1,4 @@
-const FoodService = require('../fooddonation');
+const FoodDonation = require("../models/FoodDonation");
 
 // Get all food donations
 const getFoodDonations = async (req, res) => {
@@ -9,7 +9,7 @@ const getFoodDonations = async (req, res) => {
     if (status) filters.status = status;
     if (userId) filters.donor = userId;
     
-    const donations = await FoodService.getFoodDonations(filters);
+    const donations = await FoodDonation.getFoodDonations(filters);
     
     res.status(200).json({
       success: true,
@@ -28,7 +28,7 @@ const getFoodDonations = async (req, res) => {
 const getFoodDonationById = async (req, res) => {
   try {
     const { id } = req.params;
-    const donation = await FoodService.getFoodDonationById(id);
+    const donation = await FoodDonation.getFoodDonationById(id);
     
     res.status(200).json({
       success: true,
@@ -50,7 +50,7 @@ const createFoodDonation = async (req, res) => {
       donor: req.user._id
     };
     
-    const donation = await FoodService.createFoodDonation(donationData);
+    const donation = await FoodDonation.createFoodDonation(donationData);
     
     res.status(201).json({
       success: true,
