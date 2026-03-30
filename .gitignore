@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 node_modules
 dist
 .env
 .DS_Store
 /.idea
 /.vscode
+=======
+node_modules
+dist
+.env
+.DS_Store
+/.idea
+/.vscode
+>>>>>>> 2a8c0f786549c43ed4d87999f70453227d8140ea
