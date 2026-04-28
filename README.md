@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # FeedForward Donation Platform
 
 Full stack sample app (Node/Express + React) with donation recommendations, verification workflow, impact tracking, real-time updates, and mock payments.
